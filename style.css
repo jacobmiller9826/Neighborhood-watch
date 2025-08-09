@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+/* Reset */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: black;
+  color: #00ff00;
+  font-family: 'Share Tech Mono', monospace;
+  overflow-x: hidden;
+}
+
+/* Matrix code rain canvas */
+#matrixCanvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Main container */
+.container {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid #00ff00;
+  box-shadow: 0 0 30px #00ff00;
+  border-radius: 6px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 15px #00ff00;
+}
+header p.tagline {
+  font-size: 1.2rem;
+  margin-top: 0.25rem;
+  color: #66ff66;
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+nav a {
+  display: inline-block;
+  margin: 0 1rem;
+  color: #00ff00;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.5rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+nav a:hover, nav a:focus {
+  border-color: #66ff66;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #00ff00;
+  padding-bottom: 0.3rem;
+}
+section p, section li {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #99ff99;
+}
+ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+li {
+  margin-bottom: 0.4rem;
+}
+
+/* Scrollable manual */
+#manual {
+  max-height: 450px;
+  overflow-y: scroll;
+  padding-right: 1rem;
+  border: 1px solid #00ff00;
+  background: #001100;
+  border-radius: 4px;
+}
+
+/* Scrollbar styling */
+#manual::-webkit-scrollbar {
+  width: 8px;
+}
+#manual::-webkit-scrollbar-track {
+  background: #002200;
+}
+#manual::-webkit-scrollbar-thumb {
+  background: #00ff00;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    margin: 1rem;
+    padding: 1.5rem 1rem 3rem;
+  }
+  header h1 {
+    font-size: 1.8rem;
+  }
+  nav a {
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+  }
+  #manual {
+    max-height: 300px;
+  }
+}
